@@ -7,9 +7,6 @@ const app = express();
 const server = http.Server(app);
 
 const routes = require('./routes.js');
-const { setupWebsocket } = require('./socket.js');
-
-setupWebsocket(server);
 
 app.use(cors());
 app.use(express.json());
