@@ -7,9 +7,10 @@ const upload = multer(uploadConfig);
 const colorPickerController = require('./controllers/colorPickerController.js');
 
 routes.post(
-    '/colors',
+    '/image',
     upload.single('image'),
     colorPickerController.generateImageColors
 );
+routes.get('/colors', colorPickerController.getColors);
 
 module.exports = routes;
