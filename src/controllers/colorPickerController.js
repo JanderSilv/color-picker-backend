@@ -31,7 +31,7 @@ module.exports = {
             const options = { from: 'en', to: 'pt' };
             try {
                 const text = await translate(colorsString, options);
-                console.log(text);
+                // console.log(text);
                 return text.split(',');
             } catch (error) {
                 console.error(error);
@@ -45,7 +45,7 @@ module.exports = {
             const colorsArray = colors.map((color) => color.hex());
             let colorsNameArray = await getNameColors(colorsArray);
             colorsNameArray = await translateColors(colorsNameArray);
-            console.log(colorsNameArray);
+            // console.log(colorsNameArray);
             savedColors = colorsNameArray;
             return response.json(colorsNameArray);
         } catch (error) {
